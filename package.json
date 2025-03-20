@@ -1,0 +1,65 @@
+{
+	"name": "@utopian-labs/n8n-nodes-utopianlabs",
+	"version": "0.1.4",
+	"description": "Utopian Labs integration for n8n",
+	"keywords": [
+		"n8n",
+		"n8n-community-node-package",
+		"utopianlabs",
+		"ai",
+		"research",
+		"sales"
+	],
+	"license": "MIT",
+	"homepage": "https://www.utopianlabs.ai",
+	"author": {
+		"name": "Utopian Labs",
+		"email": "support@utopianlabs.ai"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/utopianlabs/n8n-nodes-utopianlabs"
+	},
+	"engines": {
+		"node": ">=18.10",
+		"pnpm": ">=9.1"
+	},
+	"packageManager": "pnpm@9.1.4",
+	"main": "index.js",
+	"scripts": {
+		"preinstall": "npx only-allow pnpm",
+		"build": "tsc && gulp build:icons",
+		"dev": "tsc --watch",
+		"format": "prettier nodes credentials --write",
+		"lint": "eslint nodes credentials package.json",
+		"lintfix": "eslint nodes credentials package.json --fix",
+		"prepublishOnly": "pnpm build && pnpm lint -c .eslintrc.prepublish.js nodes credentials package.json"
+	},
+	"files": [
+		"dist"
+	],
+	"n8n": {
+		"n8nNodesApiVersion": 1,
+		"credentials": [
+			"dist/credentials/UtopianLabsApi.credentials.js"
+		],
+		"nodes": [
+			"dist/nodes/UtopianLabs.node.js"
+		]
+	},
+	"devDependencies": {
+		"@types/express": "^4.17.14",
+		"@types/node": "^18.11.9",
+		"@typescript-eslint/eslint-plugin": "^5.29.0",
+		"@typescript-eslint/parser": "^5.29.0",
+		"eslint": "^8.40.0",
+		"eslint-plugin-n8n-nodes-base": "^1.11.0",
+		"gulp": "^4.0.2",
+		"prettier": "^2.7.1",
+		"typescript": "^5.5.4"
+	},
+	"peerDependencies": {
+		"n8n-core": "^0.125.0",
+		"n8n-workflow": "^0.107.0"
+	}
+}
