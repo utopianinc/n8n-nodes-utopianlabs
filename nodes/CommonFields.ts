@@ -26,12 +26,12 @@ export const commonFields: INodeProperties[] = [
 		description: 'The URL from the Wait node to send the callback to',
 	},
 	{
-		displayName: 'Return mock response',
+		displayName: 'Return Mock Response',
 		name: 'isTestRun',
 		type: 'boolean',
 		default: false,
 		description:
-			'When switched on, returns a mock response so you can test workflows without running actual agents.',
+			'Whether to return a mock response. This is useful for testing workflows without running actual agents.',
 	},
 ];
 
