@@ -63,11 +63,6 @@ export class UtopianLabs implements INodeType {
 		const returnData: INodeExecutionData[] = [];
 		let responseData;
 
-		const workflow = this.getWorkflow();
-
-		// Check if this is a test run
-		const isTestRun = !workflow.active;
-
 		const operation = this.getNodeParameter('operation', 0) as string;
 
 		for (let i = 0; i < items.length; i++) {
@@ -76,6 +71,7 @@ export class UtopianLabs implements INodeType {
 				const leadCompanyWebsite = this.getNodeParameter('leadCompanyWebsite', i) as string;
 				const agent = this.getNodeParameter('agent', i) as string;
 				const n8nCallbackUrl = this.getNodeParameter('n8nCallbackUrl', i) as string;
+				const isTestRun = this.getNodeParameter('isTestRun', i) as boolean;
 
 				//additional fields
 				const additionalFields = this.getNodeParameter('additionalFields', i) as IDataObject;

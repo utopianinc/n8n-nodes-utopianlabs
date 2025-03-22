@@ -25,6 +25,14 @@ export const commonFields: INodeProperties[] = [
 		default: '={{$execution.resumeUrl}}',
 		description: 'The URL from the Wait node to send the callback to',
 	},
+	{
+		displayName: 'Return mock response',
+		name: 'isTestRun',
+		type: 'boolean',
+		default: false,
+		description:
+			'When switched on, returns a mock response so you can test workflows without running actual agents.',
+	},
 ];
 
 // Additional fields for all operations
