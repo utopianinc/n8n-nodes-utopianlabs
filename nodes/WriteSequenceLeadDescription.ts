@@ -95,5 +95,10 @@ export const writeSequenceLeadFields: INodeProperties[] = [
 		required: true,
 		default: '',
 		description: 'The full name of the sender',
+		displayOptions: {
+			show: {
+				operation: ['writeEmailSequence'],
+			},
+		},
 	},
 ];

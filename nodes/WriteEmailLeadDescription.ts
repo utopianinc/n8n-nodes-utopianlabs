@@ -78,5 +78,10 @@ export const writeEmailLeadFields: INodeProperties[] = [
 		required: true,
 		default: '',
 		description: 'The full name of the sender',
+		displayOptions: {
+			show: {
+				operation: ['writeEmail'],
+			},
+		},
 	},
 ];
