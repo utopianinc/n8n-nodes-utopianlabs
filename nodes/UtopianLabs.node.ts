@@ -138,6 +138,7 @@ export class UtopianLabs implements INodeType {
 				// Add operation-specific parameters
 				if (operation === 'writeEmail' || operation === 'writeEmailSequence') {
 					body.language = this.getNodeParameter('language', i) as string;
+					body.senderFullName = this.getNodeParameter('senderFullName', i) as string;
 				}
 
 				if (operation === 'writeEmailSequence') {

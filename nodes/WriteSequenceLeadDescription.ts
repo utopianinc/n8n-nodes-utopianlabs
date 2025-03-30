@@ -88,4 +88,12 @@ export const writeSequenceLeadFields: INodeProperties[] = [
 			maxValue: 5,
 		},
 	},
+	{
+		displayName: 'Sender Full Name',
+		name: 'senderFullName',
+		type: 'string',
+		required: true,
+		default: '',
+		description: 'The full name of the sender',
+	},
 ];
