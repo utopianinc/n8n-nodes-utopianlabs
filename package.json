@@ -1,6 +1,6 @@
 {
 	"name": "@utopian-labs/n8n-nodes-utopianlabs",
-	"version": "0.1.7",
+	"version": "0.1.8",
 	"description": "Utopian Labs integration for n8n",
 	"keywords": [
 		"n8n",
