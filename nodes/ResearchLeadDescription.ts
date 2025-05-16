@@ -29,7 +29,7 @@ export const researchLeadFields: INodeProperties[] = [
 		name: 'outputSchema',
 		type: 'json',
 		required: false,
-		default: {},
+		default: '{}',
 		description:
 			"If specified, the research agent will add an output with the schema specified here. Useful in case you'd like to extract specific data from the research report.",
 		displayOptions: {
