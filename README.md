@@ -1,4 +1,4 @@
-# n8n-nodes-utopiablabs
+# n8n-nodes-utopianlabs
 
 This is an n8n community node for Utopian Labs. It lets you use Utopian Labs in your n8n workflows.
 
