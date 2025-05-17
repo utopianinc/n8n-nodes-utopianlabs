@@ -135,6 +135,11 @@ export class UtopianLabs implements INodeType {
 					...additionalFields,
 				};
 
+				if (operation === 'researchLead') {
+					const outputSchema = this.getNodeParameter('outputSchema', i) as IDataObject;
+					if (outputSchema) body.outputSchema = outputSchema;
+				}
+
 				// Add operation-specific parameters
 				if (operation === 'writeEmail' || operation === 'writeEmailSequence') {
 					body.language = this.getNodeParameter('language', i) as string;
