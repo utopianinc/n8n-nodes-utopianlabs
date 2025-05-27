@@ -92,7 +92,7 @@ export const additionalFields: INodeProperties[] = [
 				description: 'The job title of the lead',
 			},
 			{
-				displayName: 'X/Twitter Handle',
+				displayName: 'Lead X/Twitter Handle',
 				name: 'leadXHandle',
 				type: 'string',
 				default: '',
