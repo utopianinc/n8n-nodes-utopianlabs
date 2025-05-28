@@ -92,6 +92,13 @@ export const additionalFields: INodeProperties[] = [
 				description: 'The job title of the lead',
 			},
 			{
+				displayName: 'Lead X/Twitter Handle',
+				name: 'leadXHandle',
+				type: 'string',
+				default: '',
+				description: 'The X (formerly Twitter) handle of the lead; with or without the @ symbol',
+			},
+			{
 				displayName: 'Max Research Steps',
 				name: 'maxResearchSteps',
 				type: 'number',

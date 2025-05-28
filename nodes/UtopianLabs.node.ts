@@ -114,7 +114,8 @@ export class UtopianLabs implements INodeType {
 				if (
 					additionalFields.leadEmail ||
 					additionalFields.leadLinkedIn ||
-					additionalFields.leadJobTitle
+					additionalFields.leadJobTitle ||
+					additionalFields.leadXHandle
 				) {
 					if (!additionalFields.leadFullName) {
 						throw new NodeOperationError(this.getNode(), 'Lead full name is required', {
