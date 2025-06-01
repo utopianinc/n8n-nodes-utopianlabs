@@ -152,6 +152,11 @@ export class UtopianLabs implements INodeType {
 				}
 
 				if (operation === 'categorizeLead') {
+					const additionalClassifications = this.getNodeParameter(
+						'additionalClassifications',
+						i,
+					) as IDataObject;
+
 					// Only add parameters to body if they exist and have values
 					const classificationNameOne = this.getNodeParameter(
 						'classificationNameOne',
@@ -183,48 +188,27 @@ export class UtopianLabs implements INodeType {
 					if (classificationDescriptionTwo)
 						body.classificationDescriptionTwo = classificationDescriptionTwo;
 
-					const classificationNameThree = this.getNodeParameter(
-						'classificationNameThree',
-						i,
-						'',
-					) as string;
+					const classificationNameThree = additionalClassifications?.classificationNameThree;
 					if (classificationNameThree) body.classificationNameThree = classificationNameThree;
 
-					const classificationDescriptionThree = this.getNodeParameter(
-						'classificationDescriptionThree',
-						i,
-						'',
-					) as string;
+					const classificationDescriptionThree =
+						additionalClassifications?.classificationDescriptionThree;
 					if (classificationDescriptionThree)
 						body.classificationDescriptionThree = classificationDescriptionThree;
 
-					const classificationNameFour = this.getNodeParameter(
-						'classificationNameFour',
-						i,
-						'',
-					) as string;
+					const classificationNameFour = additionalClassifications?.classificationNameFour;
 					if (classificationNameFour) body.classificationNameFour = classificationNameFour;
 
-					const classificationDescriptionFour = this.getNodeParameter(
-						'classificationDescriptionFour',
-						i,
-						'',
-					) as string;
+					const classificationDescriptionFour =
+						additionalClassifications?.classificationDescriptionFour;
 					if (classificationDescriptionFour)
 						body.classificationDescriptionFour = classificationDescriptionFour;
 
-					const classificationNameFive = this.getNodeParameter(
-						'classificationNameFive',
-						i,
-						'',
-					) as string;
+					const classificationNameFive = additionalClassifications?.classificationNameFive;
 					if (classificationNameFive) body.classificationNameFive = classificationNameFive;
 
-					const classificationDescriptionFive = this.getNodeParameter(
-						'classificationDescriptionFive',
-						i,
-						'',
-					) as string;
+					const classificationDescriptionFive =
+						additionalClassifications?.classificationDescriptionFive;
 					if (classificationDescriptionFive)
 						body.classificationDescriptionFive = classificationDescriptionFive;
 				}
